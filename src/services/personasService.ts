@@ -1,7 +1,7 @@
 import type { Persona } from "@/types/persona";
 import { mockPersonas } from "@/mock/personas";
 
-const USE_MOCK = String(import.meta.env.VITE_USE_MOCK) === 'true';
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true';
 const API_URL = import.meta.env.VITE_API_URL as string;
 
 // if(!API_URL && !USE_MOCK){
