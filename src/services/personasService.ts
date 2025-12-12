@@ -1,12 +1,14 @@
 import type { Persona } from "@/types/persona";
 import { mockPersonas } from "@/mock/personas";
 
-const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true';
-const API_URL = import.meta.env.VITE_API_URL as string;
 
-// if(!API_URL && !USE_MOCK){
-//     throw new Error('Vite api url no está definido');
-// }
+const API_URL = import.meta.env.VITE_API_URL;
+const USE_MOCK =
+  String(import.meta.env.VITE_USE_MOCK) === 'true' || !API_URL;
+
+// (opcional, solo para debug temporal)
+console.log('API_URL:', API_URL);
+console.log('USE_MOCK:', USE_MOCK);
 
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
