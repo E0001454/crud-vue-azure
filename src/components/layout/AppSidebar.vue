@@ -1,15 +1,15 @@
 <script setup lang="ts">
 
 import { RouterLink, useRoute } from 'vue-router';
-import { LayoutDashboard, Users, PieChart, Settings, LogOut } from 'lucide-vue-next'
+import { LayoutDashboard, Users, LogOut } from 'lucide-vue-next'
 
 const route = useRoute();
 
 const menuItems = [
     {name: 'Dashboard', path: '/', icon: LayoutDashboard },
     {name: 'Clientes', path: '/personas', icon: Users },
-    {name: 'Reportes', path: '/reportes', icon: PieChart },
-    {name: 'Configuración', path: '/settings', icon: Settings },
+    // {name: 'Reportes', path: '/reportes', icon: PieChart },
+    // {name: 'Configuración', path: '/settings', icon: Settings },
 ];
 
 const isActive = (path:string) => route.path === path || (path !== '/' && route.path.startsWith(path))
