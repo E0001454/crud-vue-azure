@@ -6,10 +6,6 @@ const API_URL = import.meta.env.VITE_API_URL;
 const USE_MOCK =
   String(import.meta.env.VITE_USE_MOCK) === 'true' || !API_URL;
 
-// (opcional, solo para debug temporal)
-console.log('API_URL:', API_URL);
-console.log('USE_MOCK:', USE_MOCK);
-
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 export const personasService = {
