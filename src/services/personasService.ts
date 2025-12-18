@@ -14,7 +14,7 @@ export const personasService = {
             await delay(300); 
             return [...mockPersonas];
         }
-        const res = await fetch(`${API_URL}/personas`);
+        const res = await fetch(`${API_URL}/consultar/clientes`);
         return await res.json();
     },
 
@@ -23,7 +23,7 @@ export const personasService = {
             await delay(200); 
             return mockPersonas.find(p  => p.id === id);
         }
-        const res = await fetch(`${API_URL}/personas/${id}`);
+        const res = await fetch(`${API_URL}/consultar/cliente/${id}`);
         return await res.json();
     },
 
@@ -40,7 +40,7 @@ export const personasService = {
 
             return newPersona;
         }
-        const res = await fetch(`${API_URL}/personas`, {
+        const res = await fetch(`${API_URL}/registrar/cliente`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
@@ -69,7 +69,7 @@ export const personasService = {
 
             return updated;
         }
-        const res = await fetch(`${API_URL}/personas/${id}`, {
+        const res = await fetch(`${API_URL}/actualizar/cliente/${id}`, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
@@ -86,7 +86,7 @@ export const personasService = {
 
             return;
         }
-        await fetch(`${API_URL}/personas/${id}`, {
+        await fetch(`${API_URL}/eliminar/cliente/${id}`, {
             method: 'DELETE',
         });
     }

@@ -27,7 +27,7 @@ const isActiveItem = (item:any) => {
 
 const menuItems = [
     {name: 'Dashboard', type:'internal',  path: '/', icon: LayoutDashboard },
-    {name: 'Personas', type:'internal',  path: '/personas', icon: Users },
+    {name: 'People', type:'internal',  path: '/personas', icon: Users },
     {name: 'Responsys', type:'external',  url: 'https://wonderful-ground-09f55cc1e.3.azurestaticapps.net', icon: Users },
     // {name: 'Configuración', path: '/settings', icon: Settings },
 ];
