@@ -87,7 +87,7 @@ export const personasService = {
             return;
         }
         await fetch(`${API_URL}/eliminar/cliente/${id}`, {
-            method: 'DELETE',
+            method: 'DELETE', 
         });
     }
 }
