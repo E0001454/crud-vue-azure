@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.29.1",
     "@tailwindcss/vite": "^4.1.17",
     "lucide-vue-next": "^0.559.0",
     "pinia": "^3.0.4",
