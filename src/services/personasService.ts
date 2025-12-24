@@ -9,7 +9,7 @@ const PROXY_URL =
   import.meta.env.VITE_PERSONAS_PROXY_URL ||
   'http://localhost:7071/api/personas-proxy' 
 
-export const personasService = {
+export const personasService = { 
   async getAll(): Promise<Persona[]> {
     if (USE_MOCK) {
       await delay(300)
